@@ -1,7 +1,10 @@
 package hiber.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
+@Component
 @Entity
 @Table(name = "car")
 public class Car {
@@ -13,8 +16,7 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne
-    @JoinColumn(name = "user")
+    @OneToOne(mappedBy = "car")
     private User user;
 
     public Car() {

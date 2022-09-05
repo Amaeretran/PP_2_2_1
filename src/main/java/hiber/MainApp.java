@@ -38,6 +38,7 @@ public class MainApp {
       for (User user : users2) {
          System.out.println(user);
       }
+      System.out.println("\n\n\n\n");
       System.out.println(userService.getUser("Tesla", 3));
       context.close();
    }
