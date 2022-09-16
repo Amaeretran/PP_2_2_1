@@ -30,6 +30,11 @@ public class User {
    public User() {
    }
 
+   @Autowired
+   public User(Car car) {
+      this.car = car;
+   }
+
    public User(String firstName, String lastName, String email, Car car) {
       this.firstName = firstName;
       this.lastName = lastName;
