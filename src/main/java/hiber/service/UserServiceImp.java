@@ -12,9 +12,12 @@ import java.util.List;
 @Service
 public class UserServiceImp implements UserService {
 
+   private final UserDao userDao;
 
-   @Autowired
-   private UserDao userDao;
+   @Autowired      //знаю, что необязательно, но так читаемее
+   public UserServiceImp(UserDao userDao) {
+      this.userDao = userDao;
+   }
 
    @Transactional
    @Override
